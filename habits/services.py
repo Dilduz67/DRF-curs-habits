@@ -1,4 +1,6 @@
-from datetime import timedelta, timezone
+from datetime import timedelta
+
+from django.utils import timezone
 
 from config import settings
 from habits.models import Habit
@@ -14,7 +16,7 @@ def send_telegram_messages():
     for user in User.objects.all():
         if User.id==Habit.user:
             for obj in Habit.objects.all():
-                if obj.time == today:
+                if  Habit.time <= today:
                     params = {'chat_id': user.telegram_chat_id,
                               "text": f"Hi, friend, it's time to be active! "
                                       f"Do it right now {obj.action},"
@@ -25,7 +27,4 @@ def send_telegram_messages():
                         obj.save()
                     elif obj.periodicity == 'weekly':
                         obj.time = today + timedelta(days=7)
-                        obj.save()
-                    else:
-                        obj.time = today + timedelta(days=3)
                         obj.save()

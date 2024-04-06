@@ -31,7 +31,7 @@ class HabitTestCase(APITestCase):
          data = {
              "user": self.user.id,
              "place": "Парк",
-             "time": "11:00:00",
+             "time": "2024-01-01 11:00:00",
              "action": "Пробежать 3 км",
              "is_pleasant": False,
              "is_useful": True,
@@ -51,7 +51,7 @@ class HabitTestCase(APITestCase):
         data = {
             "user": self.user.id,
             "place": "Парк",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 3 км",
             "is_pleasant": False,
             "is_useful": True,
@@ -71,7 +71,7 @@ class HabitTestCase(APITestCase):
         data = {
             "user": self.user.id,
             "place": "Спортзал",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 3 км",
             "is_pleasant": False,
             "is_useful": True,
@@ -93,7 +93,7 @@ class HabitTestCase(APITestCase):
         data = {
             "user": self.user.id,
             "place": "Спортзал",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 3 км",
             "is_pleasant": False,
             "is_useful": True,
@@ -105,7 +105,7 @@ class HabitTestCase(APITestCase):
         new_data = {
             "user": self.user.id,
             "place": "Парк",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 10 км",
             "is_pleasant": False,
             "is_useful": True,
@@ -126,7 +126,7 @@ class HabitTestCase(APITestCase):
         data = {
             "user": self.user.id,
             "place": "Спортзал",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 3 км",
             "is_pleasant": False,
             "is_useful": True,
@@ -145,7 +145,7 @@ class HabitTestCase(APITestCase):
         data = {
             "user": self.user.id,
             "place": "Спортзал",
-            "time": "11:00:00",
+            "time": "2024-01-01 11:00:00",
             "action": "Пробежать 3 км",
             "is_pleasant": True,
             "is_useful": False,
