@@ -16,8 +16,8 @@ def send_telegram_messages():
     """рассылаем сообщения всем пользователям"""
     for user in User.objects.all():
         for obj in Habit.objects.all():
-            if  Habit.time.date() <= today:
-                habit_time = Habit.time.time().strftime("%H:%M")
+            if  Habit.time.date() == today:
+                habit_time = Habit.time.strftime("%H:%M")
                 params = {'chat_id': user.telegram_chat_id,
                           "text": f"Hi, friend, it's time to be active! "
                                   f"Do {obj.action} at {habit_time},"
