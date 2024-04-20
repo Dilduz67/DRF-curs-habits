@@ -159,7 +159,7 @@ EMAIL_USE_SSL = True
 CELERY_BEAT_SCHEDULE = {
     'check_last_login': {
         'task': 'habits.tasks.tg_send_message',  # Путь к задаче
-        'schedule': datetime.timedelta(days=1),  # Расписание выполнения задачи ( 1 раз в день)
+        'schedule': datetime.timedelta(minutes=1),  # Расписание выполнения задачи ( 1 раз в день)
     },
 }
 
