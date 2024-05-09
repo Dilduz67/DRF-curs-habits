@@ -14,4 +14,4 @@ RUN pip install -r /DRF-curs-habits/requirements.txt
 COPY . .
 
 # Команда для запуска Django-сервера
-CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
+#CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
