@@ -20,9 +20,9 @@ class Habit(models.Model):
 
     is_useful = models.BooleanField(default=False, verbose_name="Связанная, полезная привычка", **NULLABLE)
 
-    periodicity = models.CharField(verbose_name="Периодичность", choices=PERIODS, default="daily")
     reward = models.CharField(max_length=500, verbose_name='Вознаграждение', **NULLABLE)
-    duration = models.PositiveIntegerField(verbose_name='Время на выполнение')
+    periodicity = models.CharField(verbose_name="Периодичность", choices=PERIODS, default="daily",max_length=200)
+    duration = models.IntegerField(verbose_name='Время на выполнение')
     is_public = models.BooleanField(verbose_name='Признак публичности', default=False)
 
     def __str__(self):
